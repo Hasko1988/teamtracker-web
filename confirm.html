@@ -3,17 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Email potvrđen — Team Tracker</title>
+  <title>Team Tracker — Email potvrda</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Segoe UI', sans-serif;
       background: #f0f4ff;
+      min-height: 100vh;
+    }
+    header {
+      background: #1565C0;
+      color: white;
+      padding: 16px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header .logo { font-size: 20px; font-weight: 700; text-decoration: none; color: white; }
+    .lang-switcher { display: flex; gap: 4px; }
+    .lang-btn {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.4);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .lang-btn.active { background: white; color: #1565C0; }
+
+    .content {
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
-      padding: 24px;
+      padding: 60px 24px;
     }
     .card {
       background: white;
@@ -37,34 +61,44 @@
     .steps p { font-size: 15px; color: #333; margin-bottom: 8px; }
     .steps p:last-child { margin-bottom: 0; }
     .steps strong { color: #1565C0; }
-    .footer-note {
-      font-size: 13px;
-      color: #999;
-      margin-top: 32px;
-    }
+    .footer-note { font-size: 13px; color: #999; margin-top: 32px; }
     .footer-note a { color: #1565C0; text-decoration: none; }
   </style>
 </head>
 <body>
+
+<header>
+  <a class="logo" href="index.html">&#128205; Team Tracker</a>
+  <div class="lang-switcher">
+    <button class="lang-btn active" data-lang="bs" onclick="applyLang('bs')">BS</button>
+    <button class="lang-btn" data-lang="en" onclick="applyLang('en')">EN</button>
+  </div>
+</header>
+
+<div class="content">
   <div class="card">
     <div class="icon">✅</div>
-    <h1>Email je potvrđen!</h1>
-    <p>Vaša email adresa je uspješno verificirana.</p>
-    <p>Možete se prijaviti u aplikaciju Team Tracker.</p>
+    <h1 data-i18n="confirm.title">Email je potvrđen!</h1>
+    <p data-i18n="confirm.msg1">Vaša email adresa je uspješno verificirana.</p>
+    <p data-i18n="confirm.msg2">Možete se prijaviti u aplikaciju Team Tracker.</p>
 
     <div class="steps">
-      <p><strong>Sljedeći korak:</strong></p>
-      <p>1. Otvorite aplikaciju <strong>Team Tracker</strong> na vašem Android uređaju</p>
-      <p>2. Prijavite se sa vašim emailom i lozinkom</p>
-      <p>3. Pridružite se grupi ili kreirajte novu</p>
+      <p><strong data-i18n="confirm.next">Sljedeći korak:</strong></p>
+      <p data-i18n="confirm.step1">1. Otvorite aplikaciju <strong>Team Tracker</strong> na vašem Android uređaju</p>
+      <p data-i18n="confirm.step2">2. Prijavite se sa vašim emailom i lozinkom</p>
+      <p data-i18n="confirm.step3">3. Pridružite se grupi ili kreirajte novu</p>
     </div>
 
-    <p>Ako niste instalirali aplikaciju, preuzmite je sa Google Play Store.</p>
+    <p data-i18n="confirm.install">Ako niste instalirali aplikaciju, preuzmite je sa Google Play Store.</p>
 
     <div class="footer-note">
-      Imate pitanje? Kontaktirajte nas na
+      <span data-i18n="confirm.contact">Imate pitanje? Kontaktirajte nas na</span>
       <a href="mailto:jasminhasic88@gmail.com">jasminhasic88@gmail.com</a>
     </div>
   </div>
+</div>
+
+<script src="translations.js"></script>
+<script src="lang.js"></script>
 </body>
 </html>

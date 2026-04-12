@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Politika privatnosti — Team Tracker</title>
+  <title>Team Tracker — Politika privatnosti / Privacy Policy</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Segoe UI', sans-serif; background: #f9fafb; color: #1a1a2e; }
@@ -14,9 +14,24 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
     }
     header .logo { font-size: 20px; font-weight: 700; text-decoration: none; color: white; }
+    header .right { display: flex; align-items: center; gap: 8px; }
     header nav a { color: white; text-decoration: none; margin-left: 24px; font-size: 14px; opacity: 0.85; }
+    .lang-switcher { display: flex; gap: 4px; margin-left: 20px; }
+    .lang-btn {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.4);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .lang-btn.active { background: white; color: #1565C0; }
     .container { max-width: 800px; margin: 60px auto; padding: 0 24px 80px; }
     h1 { font-size: 36px; font-weight: 800; color: #1565C0; margin-bottom: 8px; }
     .updated { font-size: 14px; color: #888; margin-bottom: 40px; }
@@ -32,11 +47,7 @@
       margin: 20px 0;
     }
     footer {
-      background: #111;
-      color: #aaa;
-      text-align: center;
-      padding: 24px;
-      font-size: 14px;
+      background: #111; color: #aaa; text-align: center; padding: 24px; font-size: 14px;
     }
     footer a { color: #90caf9; text-decoration: none; margin: 0 12px; }
   </style>
@@ -45,101 +56,198 @@
 
 <header>
   <a class="logo" href="index.html">&#128205; Team Tracker</a>
-  <nav>
-    <a href="index.html">Početna</a>
-    <a href="terms.html">Uslovi korištenja</a>
-    <a href="mailto:jasminhasic88@gmail.com">Kontakt</a>
-  </nav>
+  <div class="right">
+    <nav>
+      <a href="index.html" data-i18n="nav.home">Početna</a>
+      <a href="terms.html" data-i18n="nav.terms">Uslovi</a>
+    </nav>
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="bs" onclick="applyLang('bs')">BS</button>
+      <button class="lang-btn" data-lang="en" onclick="applyLang('en')">EN</button>
+    </div>
+  </div>
 </header>
 
 <div class="container">
-  <h1>Politika privatnosti</h1>
-  <p class="updated">Posljednje ažuriranje: 12. april 2026.</p>
+  <h1 data-i18n="privacy.title">Politika privatnosti</h1>
+  <p class="updated" data-i18n="privacy.updated">Posljednje ažuriranje: 12. april 2026.</p>
 
   <div class="highlight">
-    Jasmin Hašić ("programer", "mi") poštuje vašu privatnost. Ova politika objašnjava koje podatke prikupljamo, zašto ih prikupljamo i kako ih koristimo u aplikaciji <strong>Team Tracker</strong>.
+    <p data-i18n="privacy.intro">Jasmin Hašić ("programer", "mi") poštuje vašu privatnost. Ova politika objašnjava koje podatke prikupljamo, zašto ih prikupljamo i kako ih koristimo u aplikaciji <strong>Team Tracker</strong>.</p>
   </div>
 
-  <h2>1. Podaci koje prikupljamo</h2>
-  <p>Kada koristite Team Tracker, prikupljamo sljedeće podatke:</p>
-  <ul>
-    <li><strong>Email adresa</strong> — za kreiranje naloga i autentifikaciju</li>
-    <li><strong>Ime i prezime</strong> — za prikaz unutar grupe</li>
-    <li><strong>GPS lokacija</strong> — vaša trenutna pozicija, dijeli se samo sa članovima vaše grupe dok ste aktivni u aplikaciji</li>
-    <li><strong>Podaci o grupi</strong> — informacije o grupama kojima pripadate</li>
-    <li><strong>Poruke i ping obavijesti</strong> — kratke poruke unutar grupe</li>
-  </ul>
+  <!-- Sadržaj ispod nije preveden putem i18n ključeva jer je dugačak pravni tekst.
+       Za potpuni prijevod svakog paragrafa proširite translations.js. -->
 
-  <h2>2. Kako koristimo vaše podatke</h2>
-  <p>Vaše podatke koristimo isključivo za:</p>
-  <ul>
-    <li>Omogućavanje praćenja lokacije unutar vaše grupe</li>
-    <li>Slanje i primanje SOS upozorenja i poruka unutar grupe</li>
-    <li>Autentifikaciju i upravljanje nalogom</li>
-    <li>Slanje email obavijesti (potvrda registracije, reset lozinke)</li>
-  </ul>
-  <p>Vaše podatke <strong>ne prodajemo</strong> trećim stranama niti ih koristimo u komercijalne svrhe.</p>
+  <div id="content-bs">
+    <h2>1. Podaci koje prikupljamo</h2>
+    <p>Kada koristite Team Tracker, prikupljamo sljedeće podatke:</p>
+    <ul>
+      <li><strong>Email adresa</strong> — za kreiranje naloga i autentifikaciju</li>
+      <li><strong>Ime i prezime</strong> — za prikaz unutar grupe</li>
+      <li><strong>GPS lokacija</strong> — vaša trenutna pozicija, dijeli se samo sa članovima vaše grupe dok ste aktivni u aplikaciji</li>
+      <li><strong>Podaci o grupi</strong> — informacije o grupama kojima pripadate</li>
+      <li><strong>Poruke i ping obavijesti</strong> — kratke poruke unutar grupe</li>
+    </ul>
 
-  <h2>3. Dijeljenje podataka</h2>
-  <p>Vaša lokacija se dijeli <strong>samo sa članovima grupe</strong> kojoj trenutno pripadate. Niko izvan vaše grupe ne može vidjeti vašu lokaciju.</p>
-  <p>Za tehničku infrastrukturu koristimo sljedeće pouzdane servise:</p>
-  <ul>
-    <li><strong>Supabase</strong> (supabase.com) — pohrana podataka i autentifikacija, serveri u EU</li>
-    <li><strong>Google Sign-In</strong> — opcionalna prijava putem Google naloga</li>
-    <li><strong>Resend</strong> (resend.com) — slanje email obavijesti</li>
-  </ul>
+    <h2>2. Kako koristimo vaše podatke</h2>
+    <p>Vaše podatke koristimo isključivo za:</p>
+    <ul>
+      <li>Omogućavanje praćenja lokacije unutar vaše grupe</li>
+      <li>Slanje i primanje SOS upozorenja i poruka unutar grupe</li>
+      <li>Autentifikaciju i upravljanje nalogom</li>
+      <li>Slanje email obavijesti (potvrda registracije, reset lozinke)</li>
+    </ul>
+    <p>Vaše podatke <strong>ne prodajemo</strong> trećim stranama niti ih koristimo u komercijalne svrhe.</p>
 
-  <h2>4. Pohrana i sigurnost podataka</h2>
-  <p>Svi podaci su pohranjeni na Supabase serverima koji se nalaze u Evropskoj uniji. Podaci su zaštićeni enkripcijom (TLS/HTTPS) u prijenosu i u pohrani.</p>
-  <p>Pristup podacima je strogo ograničen — svaki korisnik može vidjeti samo podatke koji su mu namijenjeni (Row Level Security).</p>
+    <h2>3. Dijeljenje podataka</h2>
+    <p>Vaša lokacija se dijeli <strong>samo sa članovima grupe</strong> kojoj trenutno pripadate. Niko izvan vaše grupe ne može vidjeti vašu lokaciju.</p>
+    <p>Za tehničku infrastrukturu koristimo sljedeće pouzdane servise:</p>
+    <ul>
+      <li><strong>Supabase</strong> (supabase.com) — pohrana podataka i autentifikacija, serveri u EU</li>
+      <li><strong>Google Sign-In</strong> — opcionalna prijava putem Google naloga</li>
+      <li><strong>Resend</strong> (resend.com) — slanje email obavijesti</li>
+    </ul>
 
-  <h2>5. Koliko dugo čuvamo podatke</h2>
-  <ul>
-    <li><strong>Podaci o lokaciji</strong> — ažuriraju se u realnom vremenu i nisu historijski arhivirani</li>
-    <li><strong>Podaci naloga</strong> — čuvaju se dok nalog postoji</li>
-    <li><strong>Poruke i SOS</strong> — automatski se brišu nakon kratkog vremenskog perioda</li>
-  </ul>
-  <p>Možete zatražiti brisanje svih vaših podataka slanjem zahtjeva na jasminhasic88@gmail.com.</p>
+    <h2>4. Pohrana i sigurnost podataka</h2>
+    <p>Svi podaci su pohranjeni na Supabase serverima koji se nalaze u Evropskoj uniji. Podaci su zaštićeni enkripcijom (TLS/HTTPS) u prijenosu i u pohrani.</p>
+    <p>Pristup podacima je strogo ograničen — svaki korisnik može vidjeti samo podatke koji su mu namijenjeni (Row Level Security).</p>
 
-  <h2>6. Vaša prava (GDPR)</h2>
-  <p>Ako se nalazite u Evropskom ekonomskom prostoru, imate sljedeća prava:</p>
-  <ul>
-    <li>Pravo na pristup vašim podacima</li>
-    <li>Pravo na ispravku netačnih podataka</li>
-    <li>Pravo na brisanje podataka ("pravo na zaborav")</li>
-    <li>Pravo na prenosivost podataka</li>
-    <li>Pravo na ograničenje obrade</li>
-    <li>Pravo na prigovor</li>
-  </ul>
-  <p>Za ostvarivanje ovih prava kontaktirajte nas na: <a href="mailto:jasminhasic88@gmail.com">jasminhasic88@gmail.com</a></p>
+    <h2>5. Koliko dugo čuvamo podatke</h2>
+    <ul>
+      <li><strong>Podaci o lokaciji</strong> — ažuriraju se u realnom vremenu i nisu historijski arhivirani</li>
+      <li><strong>Podaci naloga</strong> — čuvaju se dok nalog postoji</li>
+      <li><strong>Poruke i SOS</strong> — automatski se brišu nakon kratkog vremenskog perioda</li>
+    </ul>
+    <p>Možete zatražiti brisanje svih vaših podataka slanjem zahtjeva na jasminhasic88@gmail.com.</p>
 
-  <h2>7. Djeca</h2>
-  <p>Team Tracker nije namijenjen djeci mlađoj od 13 godina. Svjesno ne prikupljamo podatke od djece mlađe od 13 godina.</p>
+    <h2>6. Vaša prava (GDPR)</h2>
+    <p>Ako se nalazite u Evropskom ekonomskom prostoru, imate sljedeća prava:</p>
+    <ul>
+      <li>Pravo na pristup vašim podacima</li>
+      <li>Pravo na ispravku netačnih podataka</li>
+      <li>Pravo na brisanje podataka ("pravo na zaborav")</li>
+      <li>Pravo na prenosivost podataka</li>
+      <li>Pravo na ograničenje obrade</li>
+      <li>Pravo na prigovor</li>
+    </ul>
+    <p>Za ostvarivanje ovih prava kontaktirajte nas na: <a href="mailto:jasminhasic88@gmail.com">jasminhasic88@gmail.com</a></p>
 
-  <h2>8. Dozvole aplikacije</h2>
-  <p>Aplikacija traži sljedeće Android dozvole:</p>
-  <ul>
-    <li><strong>ACCESS_FINE_LOCATION / ACCESS_COARSE_LOCATION</strong> — za GPS praćenje unutar grupe</li>
-    <li><strong>ACCESS_BACKGROUND_LOCATION</strong> — za slanje lokacije dok je aplikacija u pozadini (samo kada ste aktivni u grupi)</li>
-    <li><strong>POST_NOTIFICATIONS</strong> — za primanje obavijesti o SOS-u i ping-u</li>
-    <li><strong>INTERNET</strong> — za komunikaciju sa serverom</li>
-  </ul>
+    <h2>7. Djeca</h2>
+    <p>Team Tracker nije namijenjen djeci mlađoj od 13 godina. Svjesno ne prikupljamo podatke od djece mlađe od 13 godina.</p>
 
-  <h2>9. Izmjene politike</h2>
-  <p>Zadržavamo pravo izmjene ove politike. O svim značajnim izmjenama obavijestit ćemo vas putem emaila ili obavijesti u aplikaciji.</p>
+    <h2>8. Dozvole aplikacije</h2>
+    <p>Aplikacija traži sljedeće Android dozvole:</p>
+    <ul>
+      <li><strong>ACCESS_FINE_LOCATION / ACCESS_COARSE_LOCATION</strong> — za GPS praćenje unutar grupe</li>
+      <li><strong>ACCESS_BACKGROUND_LOCATION</strong> — za slanje lokacije dok je aplikacija u pozadini (samo kada ste aktivni u grupi)</li>
+      <li><strong>POST_NOTIFICATIONS</strong> — za primanje obavijesti o SOS-u i ping-u</li>
+      <li><strong>INTERNET</strong> — za komunikaciju sa serverom</li>
+    </ul>
 
-  <h2>10. Kontakt</h2>
-  <p>Za sva pitanja vezana za privatnost kontaktirajte:</p>
-  <p><strong>Jasmin Hašić</strong><br/>Email: <a href="mailto:jasminhasic88@gmail.com">jasminhasic88@gmail.com</a></p>
+    <h2>9. Izmjene politike</h2>
+    <p>Zadržavamo pravo izmjene ove politike. O svim značajnim izmjenama obavijestit ćemo vas putem emaila ili obavijesti u aplikaciji.</p>
+
+    <h2>10. Kontakt</h2>
+    <p>Za sva pitanja vezana za privatnost kontaktirajte:<br/>
+    <strong>Jasmin Hašić</strong><br/>
+    Email: <a href="mailto:jasminhasic88@gmail.com">jasminhasic88@gmail.com</a></p>
+  </div>
+
+  <div id="content-en" style="display:none">
+    <h2>1. Data We Collect</h2>
+    <p>When you use Team Tracker, we collect the following data:</p>
+    <ul>
+      <li><strong>Email address</strong> — for account creation and authentication</li>
+      <li><strong>Full name</strong> — for display within the group</li>
+      <li><strong>GPS location</strong> — your current position, shared only with members of your group while you are active in the app</li>
+      <li><strong>Group data</strong> — information about the groups you belong to</li>
+      <li><strong>Messages and ping notifications</strong> — short messages within the group</li>
+    </ul>
+
+    <h2>2. How We Use Your Data</h2>
+    <p>We use your data exclusively for:</p>
+    <ul>
+      <li>Enabling location tracking within your group</li>
+      <li>Sending and receiving SOS alerts and messages within the group</li>
+      <li>Authentication and account management</li>
+      <li>Sending email notifications (registration confirmation, password reset)</li>
+    </ul>
+    <p>We do <strong>not sell</strong> your data to third parties or use it for commercial purposes.</p>
+
+    <h2>3. Data Sharing</h2>
+    <p>Your location is shared <strong>only with the members of the group</strong> you currently belong to. No one outside your group can see your location.</p>
+    <p>For technical infrastructure we use the following trusted services:</p>
+    <ul>
+      <li><strong>Supabase</strong> (supabase.com) — data storage and authentication, EU-based servers</li>
+      <li><strong>Google Sign-In</strong> — optional sign-in via Google account</li>
+      <li><strong>Resend</strong> (resend.com) — sending email notifications</li>
+    </ul>
+
+    <h2>4. Data Storage and Security</h2>
+    <p>All data is stored on Supabase servers located in the European Union. Data is protected by encryption (TLS/HTTPS) in transit and at rest.</p>
+    <p>Data access is strictly limited — each user can only see the data intended for them (Row Level Security).</p>
+
+    <h2>5. Data Retention</h2>
+    <ul>
+      <li><strong>Location data</strong> — updated in real time and not historically archived</li>
+      <li><strong>Account data</strong> — retained while the account exists</li>
+      <li><strong>Messages and SOS</strong> — automatically deleted after a short period</li>
+    </ul>
+    <p>You can request deletion of all your data by contacting jasminhasic88@gmail.com.</p>
+
+    <h2>6. Your Rights (GDPR)</h2>
+    <p>If you are located in the European Economic Area, you have the following rights:</p>
+    <ul>
+      <li>Right of access to your data</li>
+      <li>Right to rectification of inaccurate data</li>
+      <li>Right to erasure ("right to be forgotten")</li>
+      <li>Right to data portability</li>
+      <li>Right to restriction of processing</li>
+      <li>Right to object</li>
+    </ul>
+    <p>To exercise these rights, contact us at: <a href="mailto:jasminhasic88@gmail.com">jasminhasic88@gmail.com</a></p>
+
+    <h2>7. Children</h2>
+    <p>Team Tracker is not intended for children under the age of 13. We do not knowingly collect data from children under 13.</p>
+
+    <h2>8. App Permissions</h2>
+    <p>The app requests the following Android permissions:</p>
+    <ul>
+      <li><strong>ACCESS_FINE_LOCATION / ACCESS_COARSE_LOCATION</strong> — for GPS tracking within the group</li>
+      <li><strong>ACCESS_BACKGROUND_LOCATION</strong> — for sending location while the app is in the background (only when you are active in a group)</li>
+      <li><strong>POST_NOTIFICATIONS</strong> — for receiving SOS and ping notifications</li>
+      <li><strong>INTERNET</strong> — for communication with the server</li>
+    </ul>
+
+    <h2>9. Policy Changes</h2>
+    <p>We reserve the right to modify this policy. We will notify you of any significant changes via email or in-app notification.</p>
+
+    <h2>10. Contact</h2>
+    <p>For all privacy-related questions, contact:<br/>
+    <strong>Jasmin Hašić</strong><br/>
+    Email: <a href="mailto:jasminhasic88@gmail.com">jasminhasic88@gmail.com</a></p>
+  </div>
 </div>
 
 <footer>
-  <a href="index.html">Početna</a>
-  <a href="terms.html">Uslovi korištenja</a>
-  <a href="mailto:jasminhasic88@gmail.com">Kontakt</a>
+  <a href="index.html" data-i18n="nav.home">Početna</a>
+  <a href="terms.html" data-i18n="nav.terms">Uslovi</a>
+  <a href="mailto:jasminhasic88@gmail.com" data-i18n="nav.contact">Kontakt</a>
   <br/><br/>
-  &copy; 2026 Jasmin Hašić. Sva prava zadržana.
+  <span data-i18n="footer.rights">&copy; 2026 Jasmin Hašić. Sva prava zadržana.</span>
 </footer>
 
+<script src="translations.js"></script>
+<script src="lang.js"></script>
+<script>
+  // Za privacy/terms — prebaci cijeli sadržaj blok
+  const _origApplyLang = applyLang;
+  applyLang = function(lang) {
+    _origApplyLang(lang);
+    document.getElementById('content-bs').style.display = lang === 'bs' ? '' : 'none';
+    document.getElementById('content-en').style.display = lang === 'en' ? '' : 'none';
+  };
+</script>
 </body>
 </html>
