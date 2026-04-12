@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team Tracker — Pratite svoju grupu u realnom vremenu</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; background: #f9fafb; color: #1a1a2e; }
+
+    header {
+      background: #1565C0;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header .logo { font-size: 22px; font-weight: 700; letter-spacing: 1px; }
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 24px;
+      font-size: 14px;
+      opacity: 0.85;
+    }
+    header nav a:hover { opacity: 1; }
+
+    .hero {
+      background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%);
+      color: white;
+      text-align: center;
+      padding: 100px 24px 80px;
+    }
+    .hero h1 { font-size: 48px; font-weight: 800; margin-bottom: 20px; line-height: 1.2; }
+    .hero p { font-size: 20px; opacity: 0.9; max-width: 600px; margin: 0 auto 40px; }
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 50px;
+      padding: 8px 20px;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .features {
+      max-width: 1000px;
+      margin: 80px auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+    }
+    .feature-card {
+      background: white;
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    }
+    .feature-card .icon { font-size: 40px; margin-bottom: 16px; }
+    .feature-card h3 { font-size: 20px; margin-bottom: 10px; color: #1565C0; }
+    .feature-card p { font-size: 15px; color: #555; line-height: 1.6; }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .section-sub {
+      text-align: center;
+      color: #666;
+      margin-bottom: 48px;
+      font-size: 16px;
+    }
+
+    .download-section {
+      background: #1565C0;
+      color: white;
+      text-align: center;
+      padding: 80px 24px;
+    }
+    .download-section h2 { font-size: 36px; font-weight: 700; margin-bottom: 16px; }
+    .download-section p { font-size: 18px; opacity: 0.85; margin-bottom: 36px; }
+    .btn-download {
+      display: inline-block;
+      background: white;
+      color: #1565C0;
+      padding: 16px 40px;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .btn-download:hover { background: #e3f2fd; }
+
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 14px;
+    }
+    footer a { color: #90caf9; text-decoration: none; margin: 0 12px; }
+    footer a:hover { text-decoration: underline; }
+    footer .copyright { margin-top: 12px; font-size: 13px; color: #666; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">&#128205; Team Tracker</div>
+  <nav>
+    <a href="#features">Funkcije</a>
+    <a href="privacy.html">Privatnost</a>
+    <a href="terms.html">Uslovi</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="badge">Dostupno na Android uređajima</div>
+  <h1>Pratite svoju grupu<br/>u realnom vremenu</h1>
+  <p>Team Tracker omogućava organizatorima i članovima da uvijek znaju gdje je ostatak grupe — idealno za turiste, izlete i grupna putovanja.</p>
+</section>
+
+<section class="features" id="features">
+  <div style="grid-column: 1 / -1;">
+    <div class="section-title">Zašto Team Tracker?</div>
+    <div class="section-sub">Sve što vam treba za sigurno grupno putovanje</div>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon">📍</div>
+    <h3>Praćenje lokacije</h3>
+    <p>Vidite gdje se svaki član grupe nalazi u realnom vremenu na interaktivnoj mapi.</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon">🚨</div>
+    <h3>SOS upozorenje</h3>
+    <p>U slučaju opasnosti, jednim klikom pošaljite hitno upozorenje svim članovima grupe.</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon">💬</div>
+    <h3>Poruke i ping</h3>
+    <p>Organizator može slati poruke svim članovima ili pingovati pojedinačne članove grupe.</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon">🗺️</div>
+    <h3>Tačka susreta</h3>
+    <p>Organizator može postaviti tačku susreta na mapi. Svi članovi dobijaju navigaciju do nje.</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon">👥</div>
+    <h3>Upravljanje grupom</h3>
+    <p>Kreirajte grupu, podijelite kod za pristup i pratite ko je u geofence zoni.</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon">🔒</div>
+    <h3>Sigurnost podataka</h3>
+    <p>Vaši podaci su šifrovani i sigurni. Lokacija se dijeli samo unutar vaše grupe.</p>
+  </div>
+</section>
+
+<section class="download-section">
+  <h2>Preuzmite Team Tracker</h2>
+  <p>Besplatno dostupno na Google Play Store</p>
+  <a href="#" class="btn-download">Google Play — Uskoro dostupno</a>
+</section>
+
+<footer>
+  <div>
+    <a href="privacy.html">Politika privatnosti</a>
+    <a href="terms.html">Uslovi korištenja</a>
+    <a href="mailto:jasminhasic88@gmail.com">Kontakt</a>
+  </div>
+  <div class="copyright">&copy; 2026 Jasmin Hašić. Sva prava zadržana.</div>
+</footer>
+
+</body>
+</html>
