@@ -19,7 +19,7 @@
       align-items: center;
       justify-content: space-between;
     }
-    header .logo { font-size: 20px; font-weight: 700; text-decoration: none; color: white; }
+    header .logo { font-size: 20px; font-weight: 700; text-decoration: none; color: #FFCD00; }
     .lang-switcher { display: flex; gap: 4px; }
     .lang-btn {
       background: rgba(255,255,255,0.15);
@@ -30,7 +30,9 @@
       font-size: 13px;
       font-weight: 600;
       cursor: pointer;
+      transition: all 0.2s;
     }
+    .lang-btn:hover { background: #FFCD00; color: #003DA5; border-color: #FFCD00; }
     .lang-btn.active { background: #FFCD00; color: #003DA5; border-color: #FFCD00; }
 
     .content {
