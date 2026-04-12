@@ -34,7 +34,7 @@ const translations = {
     "download.btn": "Google Play — Uskoro dostupno",
 
     // Footer
-    "footer.rights": "&copy; 2026 Jasmin Hašić. Sva prava zadržana.",
+    "footer.rights": "&copy; 2026 Jasmin Hasić. Sva prava zadržana.",
 
     // Confirm
     "confirm.title": "Email je potvrđen!",
@@ -50,7 +50,7 @@ const translations = {
     // Privacy
     "privacy.title": "Politika privatnosti",
     "privacy.updated": "Posljednje ažuriranje: 12. april 2026.",
-    "privacy.intro": "Jasmin Hašić (\"programer\", \"mi\") poštuje vašu privatnost. Ova politika objašnjava koje podatke prikupljamo, zašto ih prikupljamo i kako ih koristimo u aplikaciji <strong>Team Tracker</strong>.",
+    "privacy.intro": "Jasmin Hasić (\"programer\", \"mi\") poštuje vašu privatnost. Ova politika objašnjava koje podatke prikupljamo, zašto ih prikupljamo i kako ih koristimo u aplikaciji <strong>Team Tracker</strong>.",
 
     // Terms
     "terms.title": "Uslovi korištenja",
@@ -93,7 +93,7 @@ const translations = {
     "download.btn": "Google Play — Coming Soon",
 
     // Footer
-    "footer.rights": "&copy; 2026 Jasmin Hašić. All rights reserved.",
+    "footer.rights": "&copy; 2026 Jasmin Hasić. All rights reserved.",
 
     // Confirm
     "confirm.title": "Email Confirmed!",
@@ -109,7 +109,7 @@ const translations = {
     // Privacy
     "privacy.title": "Privacy Policy",
     "privacy.updated": "Last updated: April 12, 2026.",
-    "privacy.intro": "Jasmin Hašić (\"developer\", \"we\") respects your privacy. This policy explains what data we collect, why we collect it, and how we use it in the <strong>Team Tracker</strong> application.",
+    "privacy.intro": "Jasmin Hasić (\"developer\", \"we\") respects your privacy. This policy explains what data we collect, why we collect it, and how we use it in the <strong>Team Tracker</strong> application.",
 
     // Terms
     "terms.title": "Terms of Service",
