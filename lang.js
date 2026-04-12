@@ -23,9 +23,10 @@ function applyLang(lang) {
 }
 
 function initLang() {
+  const urlParam = new URLSearchParams(window.location.search).get('lang');
   const saved = localStorage.getItem('tt-lang');
   const browser = navigator.language?.startsWith('bs') || navigator.language?.startsWith('hr') || navigator.language?.startsWith('sr') ? 'bs' : 'en';
-  applyLang(saved || browser);
+  applyLang(urlParam || saved || browser);
 }
 
 document.addEventListener('DOMContentLoaded', initLang);
