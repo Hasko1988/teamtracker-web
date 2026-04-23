@@ -32,6 +32,7 @@ const translations = {
     "download.title": "Preuzmite Team Tracker",
     "download.subtitle": "Besplatno dostupno na Google Play Store",
     "download.btn": "Google Play — Uskoro dostupno",
+    "download.apk": "⬇ Preuzmite APK (beta verzija)",
 
     // Footer
     "footer.rights": "&copy; 2026 Jasmin Hasić. Sva prava zadržana.",
@@ -91,6 +92,7 @@ const translations = {
     "download.title": "Download Team Tracker",
     "download.subtitle": "Free on Google Play Store",
     "download.btn": "Google Play — Coming Soon",
+    "download.apk": "⬇ Download APK (beta version)",
 
     // Footer
     "footer.rights": "&copy; 2026 Jasmin Hasić. All rights reserved.",
